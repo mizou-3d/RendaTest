@@ -13,6 +13,11 @@
 		D6EB871727B9FCB3005FF829 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6EB871527B9FCB3005FF829 /* Main.storyboard */; };
 		D6EB871927B9FCBB005FF829 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6EB871827B9FCBB005FF829 /* Assets.xcassets */; };
 		D6EB871C27B9FCBB005FF829 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6EB871A27B9FCBB005FF829 /* LaunchScreen.storyboard */; };
+		D6EB872927BA1E20005FF829 /* jinmenken.png in Resources */ = {isa = PBXBuildFile; fileRef = D6EB872427BA1E1F005FF829 /* jinmenken.png */; };
+		D6EB872A27BA1E20005FF829 /* hitsuji_nohorn.png in Resources */ = {isa = PBXBuildFile; fileRef = D6EB872527BA1E1F005FF829 /* hitsuji_nohorn.png */; };
+		D6EB872B27BA1E20005FF829 /* black_sheep.png in Resources */ = {isa = PBXBuildFile; fileRef = D6EB872627BA1E1F005FF829 /* black_sheep.png */; };
+		D6EB872C27BA1E20005FF829 /* hitsuji_horn.png in Resources */ = {isa = PBXBuildFile; fileRef = D6EB872727BA1E1F005FF829 /* hitsuji_horn.png */; };
+		D6EB872D27BA1E20005FF829 /* shibafu.png in Resources */ = {isa = PBXBuildFile; fileRef = D6EB872827BA1E1F005FF829 /* shibafu.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		D6EB871827B9FCBB005FF829 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6EB871B27B9FCBB005FF829 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D6EB871D27B9FCBB005FF829 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6EB872427BA1E1F005FF829 /* jinmenken.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jinmenken.png; sourceTree = "<group>"; };
+		D6EB872527BA1E1F005FF829 /* hitsuji_nohorn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hitsuji_nohorn.png; sourceTree = "<group>"; };
+		D6EB872627BA1E1F005FF829 /* black_sheep.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = black_sheep.png; sourceTree = "<group>"; };
+		D6EB872727BA1E1F005FF829 /* hitsuji_horn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hitsuji_horn.png; sourceTree = "<group>"; };
+		D6EB872827BA1E1F005FF829 /* shibafu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shibafu.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +66,7 @@
 		D6EB870E27B9FCB3005FF829 /* RendaTest */ = {
 			isa = PBXGroup;
 			children = (
+				D6EB872327BA1E1F005FF829 /* RendaOriginalSozai */,
 				D6EB870F27B9FCB3005FF829 /* AppDelegate.swift */,
 				D6EB871127B9FCB3005FF829 /* SceneDelegate.swift */,
 				D6EB871327B9FCB3005FF829 /* ViewController.swift */,
@@ -65,6 +76,18 @@
 				D6EB871D27B9FCBB005FF829 /* Info.plist */,
 			);
 			path = RendaTest;
+			sourceTree = "<group>";
+		};
+		D6EB872327BA1E1F005FF829 /* RendaOriginalSozai */ = {
+			isa = PBXGroup;
+			children = (
+				D6EB872427BA1E1F005FF829 /* jinmenken.png */,
+				D6EB872527BA1E1F005FF829 /* hitsuji_nohorn.png */,
+				D6EB872627BA1E1F005FF829 /* black_sheep.png */,
+				D6EB872727BA1E1F005FF829 /* hitsuji_horn.png */,
+				D6EB872827BA1E1F005FF829 /* shibafu.png */,
+			);
+			path = RendaOriginalSozai;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +148,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6EB872D27BA1E20005FF829 /* shibafu.png in Resources */,
+				D6EB872C27BA1E20005FF829 /* hitsuji_horn.png in Resources */,
 				D6EB871C27B9FCBB005FF829 /* LaunchScreen.storyboard in Resources */,
+				D6EB872B27BA1E20005FF829 /* black_sheep.png in Resources */,
 				D6EB871927B9FCBB005FF829 /* Assets.xcassets in Resources */,
 				D6EB871727B9FCB3005FF829 /* Main.storyboard in Resources */,
+				D6EB872927BA1E20005FF829 /* jinmenken.png in Resources */,
+				D6EB872A27BA1E20005FF829 /* hitsuji_nohorn.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
