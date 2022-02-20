@@ -19,13 +19,13 @@ class ViewController: UIViewController {
     var count = 0
     
     let sheeps: [String] = ["hitsuji_nohorn", "black_sheep", "hitsuji_horn"]
+    let sheepsVoice: [String] = ["hitsuji_voice", "hitsuji_voice2", "yagi_voice"]
+    
+    var audioPlayer: AVAudioPlayer!
     
     var red: Float = 0
     var green: Float = 0
     var blue: Float = 0
-    
-    let sheepVoicePlayer = try! AVAudioPlayer(data: NSDataAsset(name: "hitsuji_voice")!.data)
-    let ojiVoicePlayer = try! AVAudioPlayer(data: NSDataAsset(name: "oji_voice")!.data)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,13 +47,11 @@ class ViewController: UIViewController {
         
         if count % 10 == 0{
             image = UIImage(named: "jinmenken")!
-            ojiVoicePlayer.currentTime = 0
-            ojiVoicePlayer.play()
+            playVoice(fileName: "oji_voice")
         }else{
             let sheepNum: Int = Int.random(in: 0..<3)
             image = UIImage(named: sheeps[sheepNum])!
-            sheepVoicePlayer.currentTime = 0
-            sheepVoicePlayer.play()
+            playVoice(fileName: sheepsVoice[sheepNum])
         }
         
         let imageView: UIImageView = UIImageView(image: image)
@@ -63,6 +61,7 @@ class ViewController: UIViewController {
         imageView.frame = rect
         imageView.center = CGPoint(x: CGFloat.random(in: 40...viewWidth-40), y: CGFloat.random(in: 60...viewHeight-40))
         haikei.addSubview(imageView)
+        animateView(imageView)
     }
 
     @IBAction func reset(){
@@ -74,6 +73,23 @@ class ViewController: UIViewController {
         imageView.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height)
         mostBackground.addSubview(imageView)
         haikei = imageView
+    }
+    
+    func animateView(_ viewToAnimate:UIView) {
+            UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseIn, animations: {
+                viewToAnimate.transform = CGAffineTransform(scaleX: 1.08, y: 1.08)
+            }) { (_) in
+                UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 0.3, initialSpringVelocity: 10, options: .curveEaseOut, animations: {
+                    viewToAnimate.transform = .identity
+                    
+                }, completion: nil)
+            }
+        }
+    
+    func playVoice(fileName: String){
+        audioPlayer = try! AVAudioPlayer(data: NSDataAsset(name: fileName)!.data)
+        audioPlayer.currentTime = 0
+        audioPlayer.play()
     }
 
 }
