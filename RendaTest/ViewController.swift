@@ -61,7 +61,7 @@ class ViewController: UIViewController {
         let viewWidth: CGFloat = view.frame.size.width
         let viewHeight: CGFloat = view.frame.size.height
         imageView.frame = rect
-        imageView.center = CGPoint(x: CGFloat.random(in: 0...viewWidth), y: CGFloat.random(in: 0...viewHeight))
+        imageView.center = CGPoint(x: CGFloat.random(in: 40...viewWidth-40), y: CGFloat.random(in: 60...viewHeight-40))
         haikei.addSubview(imageView)
     }
 
