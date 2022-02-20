@@ -35,6 +35,17 @@
                                 <color key="textColor" red="0.0" green="0.39374476471451958" blue="0.23969496185048897" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIw-qw-JNN">
+                                <rect key="frame" x="350" y="114" width="60" height="60"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="2OA-DX-bNc"/>
+                                    <constraint firstAttribute="width" constant="60" id="xDH-dR-HeR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tN1-cN-A5S">
                                 <rect key="frame" x="147" y="388" width="120" height="120"/>
                                 <color key="backgroundColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -63,15 +74,15 @@
                                     <action selector="reset" destination="BYZ-38-t0r" eventType="touchUpInside" id="3IT-pE-f6q"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIw-qw-JNN">
-                                <rect key="frame" x="350" y="114" width="60" height="60"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLY-jR-IV2">
+                                <rect key="frame" x="137" y="224" width="140" height="60"/>
+                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="0.81921750500000001" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="2OA-DX-bNc"/>
-                                    <constraint firstAttribute="width" constant="60" id="xDH-dR-HeR"/>
+                                    <constraint firstAttribute="height" constant="60" id="SUA-AP-ejE"/>
+                                    <constraint firstAttribute="width" constant="140" id="fvj-ZR-KRd"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -85,12 +96,15 @@
                             <constraint firstItem="I87-sC-R5J" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="GjQ-yZ-NhL"/>
                             <constraint firstItem="HUe-z6-qrq" firstAttribute="top" secondItem="tN1-cN-A5S" secondAttribute="bottom" constant="10" id="Rws-CS-iZi"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="I87-sC-R5J" secondAttribute="trailing" constant="20" id="XZ3-u0-N6x"/>
+                            <constraint firstItem="bLY-jR-IV2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="180" id="anW-BF-MM3"/>
+                            <constraint firstItem="bLY-jR-IV2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gPh-4R-sFa"/>
                             <constraint firstItem="HUe-z6-qrq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="j07-zO-xdM"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="countLabel" destination="I87-sC-R5J" id="n4P-GU-8av"/>
                         <outlet property="haikei" destination="ZOJ-ep-YkT" id="m29-dA-xY6"/>
+                        <outlet property="kakuritsuLabel" destination="bLY-jR-IV2" id="Nts-zU-Sd6"/>
                         <outlet property="mostBackground" destination="5OY-sz-eml" id="IYU-dI-xJf"/>
                         <outlet property="ojiCountLabel" destination="jIw-qw-JNN" id="SVE-34-0qz"/>
                         <outlet property="resetButton" destination="HUe-z6-qrq" id="M2y-Uh-CdN"/>

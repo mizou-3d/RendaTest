@@ -16,9 +16,11 @@ class ViewController: UIViewController {
     @IBOutlet var resetButton: UIButton!
     @IBOutlet var mostBackground: UIView!
     @IBOutlet var ojiCountLabel: UILabel!
+    @IBOutlet var kakuritsuLabel: UILabel!
     
     var count = 0
     var ojiCount = 0
+    var kakuritsu: Float = 0
     
     let sheeps: [String] = ["hitsuji_nohorn", "black_sheep", "hitsuji_horn"]
     let sheepsVoice: [String] = ["hitsuji_voice", "hitsuji_voice2", "yagi_voice"]
@@ -33,6 +35,8 @@ class ViewController: UIViewController {
         countLabel.clipsToBounds = true
         ojiCountLabel.layer.cornerRadius = 30
         ojiCountLabel.clipsToBounds = true
+        kakuritsuLabel.layer.cornerRadius = 10
+        kakuritsuLabel.clipsToBounds = true
     }
     
     @IBAction func tapTapButton(){
@@ -47,9 +51,8 @@ class ViewController: UIViewController {
             playVoice(fileName: "oji_voice")
             ojiCount += 1
             ojiCountLabel.text = String(ojiCount)
-            if ojiCount == 30{
-                
-            }
+            kakuritsu = Float(ojiCount) / Float(count) * 100
+            kakuritsuLabel.text = "\(Int(kakuritsu))%"
         }else{
             let sheepNum: Int = Int.random(in: 0..<3)
             image = UIImage(named: sheeps[sheepNum])!
@@ -71,6 +74,8 @@ class ViewController: UIViewController {
         ojiCount = 0
         countLabel.text = String(count)
         ojiCountLabel.text = String(ojiCount)
+        kakuritsu = 0
+        kakuritsuLabel.text = "\(Int(kakuritsu))%"
         haikei.removeFromSuperview()
         let haikeiImage: UIImage = UIImage(named: "shibafu")!
         let imageView: UIImageView = UIImageView(image: haikeiImage)
