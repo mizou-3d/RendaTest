@@ -15,17 +15,15 @@ class ViewController: UIViewController {
     @IBOutlet var haikei: UIView!
     @IBOutlet var resetButton: UIButton!
     @IBOutlet var mostBackground: UIView!
+    @IBOutlet var ojiCountLabel: UILabel!
     
     var count = 0
+    var ojiCount = 0
     
     let sheeps: [String] = ["hitsuji_nohorn", "black_sheep", "hitsuji_horn"]
     let sheepsVoice: [String] = ["hitsuji_voice", "hitsuji_voice2", "yagi_voice"]
     
     var audioPlayer: AVAudioPlayer!
-    
-    var red: Float = 0
-    var green: Float = 0
-    var blue: Float = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,21 +31,25 @@ class ViewController: UIViewController {
         tapButton.layer.cornerRadius = 60
         countLabel.layer.cornerRadius = 50
         countLabel.clipsToBounds = true
+        ojiCountLabel.layer.cornerRadius = 30
+        ojiCountLabel.clipsToBounds = true
     }
     
     @IBAction func tapTapButton(){
         count += 1
         countLabel.text = String(count)
-        red = Float.random(in: 0...255)
-        green = Float.random(in: 0...255)
-        blue = Float.random(in: 0...255)
-        countLabel.textColor = UIColor(red: CGFloat(red)/255, green: CGFloat(green)/255, blue: CGFloat(blue)/255, alpha: 1.0)
         
         var image: UIImage
+        let ojiGene: Int = Int.random(in: 0..<10)
         
-        if count % 10 == 0{
+        if ojiGene == 9{
             image = UIImage(named: "jinmenken")!
             playVoice(fileName: "oji_voice")
+            ojiCount += 1
+            ojiCountLabel.text = String(ojiCount)
+            if ojiCount == 30{
+                
+            }
         }else{
             let sheepNum: Int = Int.random(in: 0..<3)
             image = UIImage(named: sheeps[sheepNum])!
@@ -66,7 +68,9 @@ class ViewController: UIViewController {
 
     @IBAction func reset(){
         count = 0
+        ojiCount = 0
         countLabel.text = String(count)
+        ojiCountLabel.text = String(ojiCount)
         haikei.removeFromSuperview()
         let haikeiImage: UIImage = UIImage(named: "shibafu")!
         let imageView: UIImageView = UIImageView(image: haikeiImage)

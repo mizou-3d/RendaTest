@@ -26,13 +26,13 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I87-sC-R5J">
                                 <rect key="frame" x="294" y="44" width="100" height="100"/>
-                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="0.81921750504449509" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="gPY-Qq-WW3"/>
                                     <constraint firstAttribute="height" constant="100" id="olO-s3-zmR"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.0" green="0.39374476471451958" blue="0.23969496185048897" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tN1-cN-A5S">
@@ -63,10 +63,23 @@
                                     <action selector="reset" destination="BYZ-38-t0r" eventType="touchUpInside" id="3IT-pE-f6q"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIw-qw-JNN">
+                                <rect key="frame" x="350" y="114" width="60" height="60"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="2OA-DX-bNc"/>
+                                    <constraint firstAttribute="width" constant="60" id="xDH-dR-HeR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jIw-qw-JNN" secondAttribute="trailing" constant="4" id="3qY-Bi-anV"/>
+                            <constraint firstItem="jIw-qw-JNN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="5VY-KE-r5z"/>
                             <constraint firstItem="tN1-cN-A5S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="81q-nY-L33"/>
                             <constraint firstItem="tN1-cN-A5S" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="E12-XN-JcB"/>
                             <constraint firstItem="I87-sC-R5J" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="GjQ-yZ-NhL"/>
@@ -79,6 +92,7 @@
                         <outlet property="countLabel" destination="I87-sC-R5J" id="n4P-GU-8av"/>
                         <outlet property="haikei" destination="ZOJ-ep-YkT" id="m29-dA-xY6"/>
                         <outlet property="mostBackground" destination="5OY-sz-eml" id="IYU-dI-xJf"/>
+                        <outlet property="ojiCountLabel" destination="jIw-qw-JNN" id="SVE-34-0qz"/>
                         <outlet property="resetButton" destination="HUe-z6-qrq" id="M2y-Uh-CdN"/>
                         <outlet property="tapButton" destination="tN1-cN-A5S" id="SLg-SC-egC"/>
                     </connections>
@@ -92,6 +106,9 @@
         <image name="shibafu.png" width="400" height="400"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
